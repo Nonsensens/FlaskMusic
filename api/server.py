@@ -25,6 +25,14 @@ def render_users():
     return render_template('users.html', users=users)
 
 
+@app.route('/')
+def render():
+    resp = make_response(render_template('home.html'))
+    resp.set_cookie('logged', 'False')
+    resp.headers['location'] = url_for('render_home')
+    return resp, 302
+
+
 @app.route('/update', methods=('POST', 'GET'))
 def render_update():
     if request.method == 'POST':
