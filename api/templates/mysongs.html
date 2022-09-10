@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Songs</title>
+</head>
+<body>
+{% for song in songs %}
+<div>{{song.song_name}}</div>
+<div>{{song.song_author}}</div>
+<div>-----------------</div>
+{% endfor %}
+</body>
+</html>

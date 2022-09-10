@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+</head>
+<body>
+{% for user in users %}
+<div>username: {{user.username}}</div>
+<div>email: {{user.email}}</div>
+<div>---------------</div>
+{% endfor %}
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Charts</title>
+</head>
+<body>
+{% for song in songs %}
+<form method="POST">
+    <div>
+    Автор: {{song}}
+        <input hidden name="song_author" value="{{song}}"><input hidden name="song_name" value="{{songs[song]}}">
+    Название песни: {{songs[song]}}
+        <button type="submit">Добавить трек</button>
+    </div>
+</form>
+{% endfor %}
+</body>
+</html>
